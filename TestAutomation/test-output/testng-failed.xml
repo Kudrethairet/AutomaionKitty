@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Regression Test Suite]">
+  <listeners>
+    <listener class-name="com.selenium.customlibrary.ExtentReportTestNG"/>
+  </listeners>
+  <test name="Greate Course Smoke Test">
+    <packages>
+      <package name="com.selenium.week8.greatcourses.tests"/>
+    </packages>
+    <classes>
+      <class name="com.selenium.week8.greatcourses.tests.GreatCourseRegressionTests"/>
+    </classes>
+  </test> <!-- Greate Course Smoke Test -->
+  <test name="Greate Course Smoke Test(failed)">
+    <classes>
+      <class name="com.selenium.week8.greatcourses.tests.GreatCourseRegressionTests">
+        <methods>
+          <include name="beforeClass"/>
+          <include name="teardown"/>
+          <include name="buyCourseTest"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.selenium.week8.greatcourses.tests.GreatCourseRegressionTests -->
+    </classes>
+  </test> <!-- Greate Course Smoke Test(failed) -->
+</suite> <!-- Failed suite [Regression Test Suite] -->
